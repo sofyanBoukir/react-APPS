@@ -1,6 +1,6 @@
 import React from 'react'
 
-const App = () => {
+const Ex = () => {
     //Ex 1
     // const list = [2,5,8,7,3];    
     // let res = list.map(item => item *3)
@@ -82,6 +82,7 @@ const App = () => {
         { id :11, titre : 'JS ES6', auteur :'FAMI', prix :230},
         { id :12, titre : 'Algorithme', auteur :'KARIMI', prix :330},
         { id :13, titre : 'HTMH& CSS', auteur :'RAMI', prix :340}   
+
     ]
 
     // const titres = livres.map(livre => livre.titre);
@@ -109,4 +110,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default Ex;
