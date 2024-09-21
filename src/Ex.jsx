@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Ex = () => {
-    //Ex 1
+    //Ex 1///
     // const list = [2,5,8,7,3];    
     // let res = list.map(item => item *3)
     // console.log(res);
@@ -13,23 +13,23 @@ const Ex = () => {
     // console.log(sum);
 
 
-    //Ex 2
-    // const personnes = [
-    //     { nom: "Rami", age: 33, estMember: true },
-    //     { nom: "Fatihi", age: 24, estMember: false },
-    //     { nom: "Chakib", age: 45, estMember: true },
-    //     { nom: "Mounir", age: 37, estMember: false },
-    // ];
+    // Ex 2
+    const personnes = [
+        { nom: "Rami", age: 33, estMember: true },
+        { nom: "Fatihi", age: 24, estMember: false },
+        { nom: "Chakib", age: 45, estMember: true },
+        { nom: "Mounir", age: 37, estMember: false },
+    ];
 
-    // const arrayNomMembre = personnes.filter(personne => personne.estMember == true)
-    // console.log(arrayNomMembre);
+    const arrayNomMembre = personnes.filter(personne => personne.estMember == true)
+    console.log(arrayNomMembre);
     
 
-    // const arrayAges = personnes.filter(personne => personne.age > 24);
-    // console.log(arrayAges);
+    const arrayAges = personnes.filter(personne => personne.age > 24);
+    console.log(arrayAges);
     
-    // const arrayTrue = personnes.filter(personne => personne.age > 24 && personne.estMember == true);
-    // console.log(arrayTrue);
+    const arrayTrue = personnes.filter(personne => personne.age > 24 && personne.estMember == true);
+    console.log(arrayTrue);
 
 
     //Ex 3
@@ -99,12 +99,36 @@ const Ex = () => {
     // console.log(total_prix);
     
 
-    const Array_mesLivres = [...livres];
-    console.log(Array_mesLivres);
+    // const Array_mesLivres = [...livres];
+    // console.log(Array_mesLivres);
 
     
   return (
     <div>
+      <h1>Ex2 -1</h1>
+      <ul>
+        {
+          arrayNomMembre.map(elem =>{
+            return <li>{elem.nom}</li>
+          })
+        }
+      </ul>      
+      <h1>Ex2 -2</h1>
+      <ul>
+        {
+          arrayAges.map(elem =>{
+            return <li>{elem.nom}</li>
+          })
+        } 
+      </ul>
+      <h1>Ex2 -3</h1>
+      <ul>
+        {
+          arrayTrue.map(elem =>{
+            return <li>{elem.nom}</li>
+          })
+        } 
+      </ul>
       
     </div>
   )

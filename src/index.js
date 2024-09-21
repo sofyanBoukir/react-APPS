@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './to do list/App';
-// import Ex from './Ex';
+import Ex from './Ex';
 import reportWebVitals from './reportWebVitals';
+import Exclass from './Exclass';
+
+const personnes = [
+      { nom: "Rami", age: 33, estMember: true },
+      { nom: "Fatihi", age: 24, estMember: false },
+      { nom: "Chakib", age: 45, estMember: true },
+      { nom: "Mounir", age: 37, estMember: false },
+];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Exclass personnes={personnes}/>
+    {/* <Ex /> */}
   </React.StrictMode>
 );
 
