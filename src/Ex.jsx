@@ -91,8 +91,8 @@ const Ex = () => {
     // const titres_2 = livres.filter(livre => livre.auteur === 'RAMI');
     // const titres__2 = titres_2.map(livre => livre.titre);
     // console.log(titres__2);
-    
-    // const livre_12 = livres.filter(livre => livre.id == 12);
+
+    // const livre_12 = livres.filter(livre => livre.id = 12);
     // console.log(livre_12);
 
     // const total_prix = livres.reduce((total,pr)=>(total = total + pr.prix),0);
