@@ -14,6 +14,7 @@ const Learn = () => {
     "How to respond to events and update the screen",
     "How to share data between components"
   ];
+  
   return (
     <>
       <Header />
@@ -24,7 +25,7 @@ const Learn = () => {
           <p>
             Welcome to the React documentation! This page will give you an
             introduction to the 80% of React concepts that you will use on a
-            daily basis.
+            daily basis. react developed by facebook
           </p>
           <div className="learn-list">
             <ul>

@@ -5,6 +5,7 @@
     --button-text-color:white;
     --button-hover: rgb(47, 52, 63);
     --bg-input: rgb(47, 52, 63);
+    --item-hover: rgb(54, 56, 65);
 }
 
 body[data-theme = 'light']{
@@ -14,6 +15,7 @@ body[data-theme = 'light']{
     --button-text-color:rgb(35 39 47);
     --button-hover: rgb(232, 232, 232);
     --bg-input:rgb(232, 232, 232);
+    --item-hover: rgb(201, 201, 201);
 }
 
 body{
@@ -61,7 +63,7 @@ body{
 }
 .header button a{
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 .header button:hover{
     background-color: var(--button-hover);
@@ -124,7 +126,7 @@ body{
     transition: 0.2s ease;
 }
 #item:hover{
-    background-color: rgb(54, 56, 65);
+    background-color: var(--item-hover);
 }
 #childer{
     font-size: 16px;
@@ -136,7 +138,7 @@ body{
     transition: 0.2s ease;
 }
 #childer:hover{
-    background-color: rgb(54, 56, 65);
+    background-color: var(--item-hover);
 }
 #current-path{
     background-color: var(--button-hover);
