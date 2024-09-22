@@ -2,20 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Body from './Components/Body';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Learn from './Components/Learn';
-
+import Document from './Document';
+import Livre from './Livre';
+import LastEx from './LastEx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Body />}></Route>
-        <Route path='/Learn' element={<Learn />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <Document id={2} dateEdition={"22-04-2018"} />
+    <Livre id={6} dateEdition={"21-10-2021"} titre={"Barca"} auteur={"Messi"} />
+    <LastEx />
   </React.StrictMode>
 );
 
