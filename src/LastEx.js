@@ -24,6 +24,7 @@ const LastEx = () => {
     const mesLivres = [...livres];
     console.log(mesLivres);
     
+    
   return (
     <div>
       
