@@ -9,6 +9,14 @@ const LastEx = () => {
         { id :13, titre : 'HTMH& CSS', auteur :'RAMI', prix :340}
     ];
 
+    const livres_2=[
+      { id :10, titre : 'POO', auteur :'RAMI', prix :300},
+      { id :11, titre : 'JS ES6', auteur :'FAMI', prix :230},
+      { id :12, titre : 'Algorithme', auteur :'KARIMI', prix :330},
+      { id :13, titre : 'HTMH& CSS', auteur :'RAMI', prix :340}
+  ];
+    
+    // cccccc
     const titres = livres.map(livre => livre.titre);
     console.log(titres);
     
