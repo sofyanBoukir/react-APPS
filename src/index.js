@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Document from './Document';
-import Livre from './Livre';
-import LastEx from './LastEx';
+import App from './components/App';
+import Voiture from './components/Voiture';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Document id={2} dateEdition={"22-04-2018"} />
-    <Livre id={6} dateEdition={"21-10-2021"} titre={"Barca"} auteur={"Messi"} />
-    <LastEx />
+    <App />
+    <Voiture />
   </React.StrictMode>
 );
 
