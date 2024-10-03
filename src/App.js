@@ -14,6 +14,14 @@ const App = () => {
         setValueToSearch(event.target.value)
     }
 
+    const handleSearch = () =>{
+        const productsFiltered = products.filter(product =>{
+            return product.title.includes(valueToSearch);
+        })
+
+        setProducts(productsFiltered);
+    }
+
     const handleCategory = (e) =>{
         setCategory(e.target.value)
     }
@@ -21,7 +29,8 @@ const App = () => {
     const fetchData = () =>{
         axios.get(`https://fakestoreapi.com/products/category/${category}`)
         .then((response) =>{
-            setProducts(response.data)
+            setProducts(response.data);
+
         })
         .catch((error) =>{
             console.log(error);
@@ -43,7 +52,7 @@ const App = () => {
                 value={valueToSearch}
                 onChange={handleChange}/>
 
-                <button id='search_btn'>Search</button>
+                <button id='search_btn' onClick={handleSearch}>Search</button>
                 <button id='reset_btn'>Reset</button>
             </div>
         </div>
@@ -73,13 +82,13 @@ const App = () => {
                                 <td>{product.id}</td>
                                 <td>{product.title}</td>
                                 <td id='price'>{product.price}</td>
-                                <td>{product.description}</td>
+                                <td>{product.description.slice(0,100)}...</td>
                                 <td id='category'>{product.category}</td>
                                 <td><img src={product.image} /></td>
                                 <td id='rating'>{product.rating.rate}/5</td>
                             </tr>
                         })
-                    :null 
+                    :<p>No items founded</p> 
                 }
             </table>
         </div>
