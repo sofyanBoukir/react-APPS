@@ -1,88 +1,59 @@
 *{
     font-family: Calibri;
 }
-.app{
-    width: 80%;
-    font-family: calibri;
-    margin: 50px auto;
+
+
+.header{
+    background-color: rgb(0, 81, 255);
+    color: white;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
 }
-.app .search-conatiner{
-    width: 25%;
+.header a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.blog{
+    text-align: center;
+    margin-top: 70px;
+    width: 60%;
+    margin: 40px auto;
+}
+.blog p{
+    color: gray;
+    font-size: 18px;
+}
+
+.blog .cards{
     display: flex;
     justify-content: space-between;
 }
-.app .search-conatiner input{
-    border: 1px solid black;
-    padding: 6px 15px;
-    border-radius: 2px;
-    outline: none;
-}
-.app .search-conatiner #search_btn{
-    background-color: rgb(58, 123, 208);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 2px;
-    border: none;
-    cursor: pointer;
-}
-.app .search-conatiner #reset_btn{
-    background-color: rgb(74, 69, 91);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 2px;
-    border: none;
-    cursor: pointer;
+.blog .cards .text-center{
+    width: 30%;
 }
 
-
-.app .categories-container{
-    width: 100%;
-}
-.app .categories-container button{
-    width: 25%;
-    border-radius: 0px;
-    background-color: rgb(167, 166, 166);
-    color: white;
-    padding: 8px 0px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-#selected{
-    background-color: black;
-}
-
-.app .products-container table{
-    border: 1px solid rgb(189, 189, 189);
-}
-.app .products-container table img{
-    width: 200px;
-    height: 200px;
-}
-
-.app .products-container #price,#category,#rating{
-    font-weight: 600;
-    font-size: 18px;
-    padding: 4px 6px;
-    height: 20px;
-    border-radius: 8px;
-}
-
-
-
-
-
-.form-validation form{
+.form-validation{
     width: 60%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 .errors{
-    background-color: rgb(242, 182, 182);
-    color: rgb(240, 61, 61);
+    background-color: rgb(247, 178, 178);
+    color: rgb(249, 46, 46);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.not_found{
     width: 60%;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+.blogs{
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
 }

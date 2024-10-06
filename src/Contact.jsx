@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
 import "./styles.css"
+import Header from './Header';
 
-const FormValidation = () => {
+const Contact = () => {
     const nameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -47,7 +48,9 @@ const FormValidation = () => {
         }
     }
   return (
-    <div className='form-validation'>
+    <>
+        <Header />
+        <div className='form-validation'>
         {
             errors.length > 0?
                 <div className='errors'>
@@ -63,28 +66,29 @@ const FormValidation = () => {
                 </div>
             :null
         }
-      <form onSubmit={handleSubmit}>
-          <h3>Contact form</h3>
-        <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Full name</label>
-            <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Enter Full name" ref={nameRef} />
+        <form onSubmit={handleSubmit}>
+            <h3>Contact form</h3>
+            <div className="form-group">
+                <label htmlFor="exampleInputEmail1">Full name</label>
+                <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Enter Full name" ref={nameRef} />
+            </div>
+            <div className="form-group">
+                <label htmlFor="exampleInputEmail1">Email address</label>
+                <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" ref={emailRef} />
+            </div>
+            <div className="form-group">
+                <label htmlFor="exampleInputPassword1">Password</label>
+                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" ref={passwordRef} />
+            </div>
+            <div className="form-check">
+                <input type="checkbox" className="form-check-input" id="exampleCheck1" ref={acceptRef} />
+                <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Email address</label>
-            <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" ref={emailRef} />
-        </div>
-        <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" ref={passwordRef} />
-        </div>
-        <div className="form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" ref={acceptRef} />
-            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
-    </div>
+    </>
   )
 }
 
-export default FormValidation
+export default Contact
