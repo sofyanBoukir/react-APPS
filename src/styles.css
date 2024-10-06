@@ -1,3 +1,6 @@
+*{
+    font-family: Calibri;
+}
 .app{
     width: 80%;
     font-family: calibri;
@@ -66,4 +69,20 @@
     padding: 4px 6px;
     height: 20px;
     border-radius: 8px;
+}
+
+
+
+
+
+.form-validation form{
+    width: 60%;
+    margin: 10px auto;
+}
+.errors{
+    background-color: rgb(242, 182, 182);
+    color: rgb(240, 61, 61);
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
