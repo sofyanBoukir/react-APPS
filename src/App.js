@@ -1,39 +1,31 @@
-import React, {  createContext, useState } from 'react'
-import "./styles.css"
-import Card from './Card';
-
-export const AppContext = createContext();
+import React, { useCallback, useEffect } from 'react'
 
 const App = () => {
+  let a = 13;
+  let b = 14;
 
-  const [isDarkMode,setIsDarkMode] = useState(false);
+  const handleClick = useCallback(() =>{
 
-
-  const handleChange = (event) =>{
-    setIsDarkMode(!isDarkMode)
-    console.log(isDarkMode);
+    let result = a+b;
+    console.log(result);
     
-  }
+  },[a,b])
+
+
+  useEffect(() =>{
+    let result = a+b;
+    console.log(result); 
+  },[a,b])
+
+
+
   return (
-    <>
-      <AppContext.Provider value={isDarkMode}>
-        <div className={isDarkMode?"darkMode":""}> 
-          <div class="form-check form-switch">
-            <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onChange={handleChange} checked={isDarkMode}/>
-            <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Dark mode</label>
-          </div>
-          <hr></hr>
-          <div className='cards'>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-          </div>
-        </div>
-      </AppContext.Provider>
-    </>
+    <div>
+        <button onClick={handleClick}>Click to calcul (useCallback)</button>
+        <button>Click to calcul (useEffect)</button>
+
+    </div>
   )
 }
 
-
-export default App;
+export default App
