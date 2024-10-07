@@ -1,29 +1,24 @@
-import React, { useCallback, useEffect } from 'react'
+import React from 'react'
+
+function expensiveCalcul(value) {
+  for(let i=0; i<1000; i++){
+    value ++;
+  }
+  return value
+}
 
 const App = () => {
-  let a = 13;
-  let b = 14;
 
-  const handleClick = useCallback(() =>{
+  let n = 1;
 
-    let result = a+b;
-    console.log(result);
-    
-  },[a,b])
-
-
-  useEffect(() =>{
-    let result = a+b;
-    console.log(result); 
-  },[a,b])
-
+  const calculate = () =>{
+    return expensiveCalcul(n);
+  }
 
 
   return (
     <div>
-        <button onClick={handleClick}>Click to calcul (useCallback)</button>
-        <button>Click to calcul (useEffect)</button>
-
+      <h1>{calculate()}</h1>
     </div>
   )
 }
