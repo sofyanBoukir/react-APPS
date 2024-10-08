@@ -20,6 +20,9 @@ export default class Fruits extends Component {
     }
 
     handleDelete(index){
+
+        console.log("function worked",index);
+        
         let copy = [...this.state.fruits];
         let deletedItem = copy.filter((item,i) => i !== index);
         this.setState({fruits:deletedItem});
@@ -32,7 +35,7 @@ export default class Fruits extends Component {
         <ul>
             {
                 this.state.fruits.map((fruit,index) =>{
-                    return <li key={index}>{fruit} <button onClick={(index) => this.handleDelete(index)}>X</button></li>
+                    return <li key={index}>{fruit} <button onClick={() => this.handleDelete(index)}>X</button></li>
                 })
             }
         </ul>
