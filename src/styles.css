@@ -1,24 +1,8 @@
-body{
-    padding: 20px 100px;
+.fruits{
+    width: 40%;
+    margin: 40px auto;
+    text-align: center;
 }
-.form-switch{
-    display: flex;
-    justify-content: end;
-}
-.form-switch input{
-    cursor: pointer;
-}
-
-.cards{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.cards .card{
-    width: 20%;
-}
-
-.darkMode{
-    background-color: black;
-    color: white;
+.fruits ul{
+    list-style: none;
 }
