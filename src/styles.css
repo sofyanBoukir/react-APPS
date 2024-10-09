@@ -1,8 +1,11 @@
-.fruits{
-    width: 40%;
-    margin: 40px auto;
-    text-align: center;
+*{
+    font-family: Calibri;
 }
-.fruits ul{
-    list-style: none;
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+.header svg{
+    cursor: pointer;
 }
