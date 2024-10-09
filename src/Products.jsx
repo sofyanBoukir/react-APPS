@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./styles.css";
 import Product from './Product';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-
-
+import Header from './Header';
 
 const Products = () => {
 
@@ -29,20 +27,21 @@ const Products = () => {
 
 
   return (
-    <div className='products'>
+    <>
+        <Header />
+        <div className='products'>
         {
             loading ?<h1>Loading! Please wait...</h1>:null
         }
         {
             products.length && loading === false? 
                 products.map((product) =>
-                    <Link to={`/product/${product.id}`}>
-                        <Product product={product} />
-                    </Link>
+                    <Product product={product} />
                 )
             : <h1>No products here</h1>
         }
     </div>
+    </>
   )
 }
 

@@ -72,8 +72,21 @@
 }
 .single-product img{
     width: 40%;
+    height: 400px;
     border-radius: 10px;
 }
 .single-product .details{
     width: 50%;
+}
+.single-product .product-price{
+    font-family: Calibri;
+    font-weight: 600;
+}
+.single-product .details button{
+    background-color: rgb(0, 136, 255);
+    color: white;
+    border-radius: 4px;
+    padding: 6px 20px;
+    border: none;
+    transition: 0.2s ease;
 }
