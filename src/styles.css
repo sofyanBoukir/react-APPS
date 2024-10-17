@@ -1,92 +1,99 @@
-*{
-    font-family: Candara;
-    box-sizing: border-box;
+.app-searcher{
+    width: 60%;
+    margin: 40px auto;
+    text-align: center;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 100px;
-    box-shadow: 0px 0px 10px black;
-}
-.header svg{
-    cursor: pointer;
-}
-
-
-.products{
-    margin: 20px 100px;
-    display: flex;
-    justify-content: space-between !important;
-    flex-wrap: wrap;
-    font-family: Candara;
-}
-.product{
-    width: calc(25% - 20px);
-    margin-bottom: 20px;
-    cursor: pointer;
-    padding: 8px 10px;
-    transition: 0.2s ease;
-}
-.product:hover{
-    background-color: rgb(238, 238, 238);
-    
-}
-.product img{
-    width: 100%;
-    margin: 0 auto;
-    height: 300px;
-    border-radius: 6px;
-}
-.product .rate{
-    font-size: 20px;
-    font-weight: 550;
-}
-.product .price{
-    font-size: 25px;
-    font-weight: 600;
-}
-.product .price-add{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.product button{
-    background-color: rgb(0, 136, 255);
-    color: white;
-    border-radius: 4px;
+.app-searcher form input[type='text']{
+    width: 60%;
     padding: 6px 10px;
-    border: none;
-    transition: 0.2s ease;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid black;
 }
-.product button:hover{
-    background-color: rgb(0, 115, 255);
+.app-searcher form input[type='submit']{
+    padding: 6px 1px;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 15px;
+    margin-left: 10px;
 }
 
-.single-product{
-    display: flex;
-    margin: 20px 100px;
-    padding: 10px 20px;
+.loading{
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(0, 132, 255);
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 30px;
+    border-bottom-color: white;
+    animation: loadingAnimation 0.7s infinite linear;
+}
+
+iframe{
+    width: 60%;
+    height: 300px;
     border-radius: 10px;
-    border: 2px solid gray;
-    justify-content: space-between;
 }
-.single-product img{
-    width: 40%;
-    height: 400px;
+@keyframes loadingAnimation{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.container{
+    width: 60%;
+    margin: 100px auto;
+    background-color: rgb(0, 191, 255);
     border-radius: 10px;
+    padding: 5px 10px;
 }
-.single-product .details{
-    width: 50%;
+.container table tr td{
+    width: 20%;
 }
-.single-product .product-price{
-    font-family: Calibri;
-    font-weight: 600;
+.container table tr td input,select{
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 10px;
+    outline: none;
 }
-.single-product .details button{
-    background-color: rgb(0, 136, 255);
+.container form input[type='submit']{
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background-color: rgb(112, 179, 112);
+    border: none;
     color: white;
+}
+.container .pan h1{
+    text-align: center;
+    background-color: pink;
+}
+.container .pan table{
+    width: 100%;
+    border: 2px solid gray;
+}
+.container .pan table tr th{
+    text-align: center;
+    padding: 10px;
+}
+.container .pan table tr td{
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.container .pan table tr td button{
+    background-color: rgb(212, 138, 0);
+    color: white;
+    padding: 6px 10px;
     border-radius: 4px;
-    padding: 6px 20px;
     border: none;
     transition: 0.2s ease;
+}
+.container .pan table tr td button:hover{
+    background-color: rgb(255, 166, 0);
 }
