@@ -1,37 +1,44 @@
-import React, { useState } from 'react'
-import { Search } from './Search';
-import { Results } from './Results';
+import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
-const list = [
-    { nom: "banane", type: "fruit" },
-    { nom: "orange", type: "fruit" },
-    { nom: "pomme", type: "fruit" },
-    { nom: "raisins", type: "fruit" },
-    { nom: "kiwi", type: "fruit" },
-    { nom: "tomate", type: "legume" },
-    { nom: "carotte", type: "legume" },
-    { nom: "pomme de terre", type: "legume" },
-    { nom: "navet", type: "legume" },
-    { nom: "poivron", type: "legume"},
-];
+export const App = () => {  
 
-export const App = () => {
-    const [type,setType] = useState("");
-    const [results,setResults] = useState([]);
+  const [formData,setFormData] = useState({
+    nom:"---",
+    prenom:"---",
+    age:0 
+  })
 
-    const onSearchSubmit = (terme) =>{
-        setType(terme)
-        setResults(list.filter((item) => item.type === type))
-        console.log(results);
-        
-    }
-    
+  useEffect(() =>{
+    document.title = formData.nom +" "+ formData.prenom;
+  },[formData])
 
+  const hanldeChange = (e) =>{
+    setFormData({...formData,[e.target.name]:e.target.value})
+  }
   return (
-    <div className='container'>
-        <h1>App component</h1>  
-        <Search onSearch={onSearchSubmit} /> 
-        <Results result={results} />
+    <div>
+      <label>Nom</label>
+      <input type='text'
+      name='nom'
+      value={formData.nom}
+      onChange={hanldeChange} />
+
+      <label>Prenom</label>
+      <input type='text'
+      name='prenom'
+      value={formData.prenom}
+      onChange={hanldeChange} />
+
+      <label>Age</label>
+      <input type='text'
+      name='age'
+      value={formData.age}
+      onChange={hanldeChange} />
+
+      <h2>Salutation</h2>
+      <p>Salut {formData.nom} {formData.prenom} votre age est {formData.age}</p>
     </div>
   )
 }
